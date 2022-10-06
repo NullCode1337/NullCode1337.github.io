@@ -52,7 +52,22 @@ body {
   padding: 0 .25rem;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+#contact-link-discord {
+	color: #F0F8FF;
+	line-height: 26pt;
+	text-decoration: none;
+	font-size: 20px;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
 #contact-link:hover {
+  box-shadow: inset 200px 0 0 0 #483D8B;
+  color: white;
+}
+
+#contact-link-discord:hover {
   box-shadow: inset 200px 0 0 0 #483D8B;
   color: white;
 }

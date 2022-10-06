@@ -5,6 +5,7 @@
 	<title>Contact NullCode</title>
 
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="tooltip.css">
 	<link rel="stylesheet" href="../navigation.css">
 	
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,14 +35,24 @@
             <li><a href="#">Donate</a></li>
          </ul>
       </nav>
+	  <script type="text/javascript">
+		function copyDiscord() {
+		  navigator.clipboard.writeText("NullCode#1337");
+		  document.getElementById("contact-link-discord").innerHTML = 'Copied!';
+		  setTimeout(function(){ 
+		      document.getElementById("contact-link-discord").innerHTML = 'NullCode#1337';
+		  }, 2000);  
+		  
+		}
+	  </script>
       <div class="content">
          <div>
               <h2 id="heading">Contact me on:</h2>
 			  <h2 id="contact-text">
-			    &nbsp;1) Discord:             <a id="contact-link" href="">NullCode#1337</a>                                          </br> 
-				&nbsp;2) Discord Server:      <a id="contact-link" href="https://discord.gg/vr2gVjyuNv">vr2gVjyuNv</a>                </br>
-				&nbsp;3) Instagram:           <a id="contact-link" href="https://www.instagram.com/nullcode1337_/">nullcode1337_</a>  </br>
-				&nbsp;4) Github:              <a id="contact-link" href="https://github.com/NullCode1337/">NullCode1337</a>           </br>
+			    &nbsp;1) Discord:             <a id="contact-link-discord" href="javascript:copyDiscord()">NullCode#1337</a>            </br> 
+				&nbsp;2) Discord Server:      <a id="contact-link" href="https://discord.gg/vr2gVjyuNv">vr2gVjyuNv</a>                  </br>
+				&nbsp;3) Instagram:           <a id="contact-link" href="https://www.instagram.com/nullcode1337_/">nullcode1337_</a>    </br>
+				&nbsp;4) Github:              <a id="contact-link" href="https://github.com/NullCode1337/">NullCode1337</a>             </br>
 				&nbsp;5) Telegram (Inactive): <a id="contact-link" href="https://t.me/nullcode1337">nullcode1337</a> 
 			  </h2>
          </div>
