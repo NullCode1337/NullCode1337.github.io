@@ -3,22 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 @font-face {
   font-family: 'SegoeScript';
-  src: url("./assets/fonts/segoesc.ttf")
+  src: url("../assets/fonts/segoesc.ttf")
 }
-*{
-  margin: 0;
+*{	  margin: 0;}
+nav{
+
   padding: 0;
   box-sizing: border-box;
-} 
-body {
-  background-image: url("./assets/media/dark.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #000000;
-  color: black;
-}
-nav{
   font-family: 'Poppins', sans-serif;
   display: flex;
   height: 80px;
@@ -120,12 +111,5 @@ input[type="checkbox"]{
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: -1;
-  width: 100%;
-  padding: 0 30px;
-  color: #1b1b1b;
-}
-.content div{
-  font-size: 40px;
-  font-weight: 700;
+
 }

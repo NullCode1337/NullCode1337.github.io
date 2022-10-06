@@ -3,6 +3,7 @@
 	<title>Contact NullCode</title>
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="stylesheet" href="navigation.css">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -16,12 +17,10 @@
 		background-size: cover;
 		background-attachment: fixed;
 		background-color: #000000;
-		display: grid;
-		align-items: center;
-		justify-content: center;
+		background-repeat: no-repeat;
 	}
 	@media (max-width: 480px) {
-		#div {
+		#content {
 			top: 50%; /* IMPORTANT */
 			left: 50%; /* IMPORTANT */
 			display: block;
@@ -37,12 +36,12 @@
 		word-spacing: 5px;
 		line-height: 2.0;
 	}
-	a {
+	.yesss {
 	  position: relative;
 	  color: white;
 	  text-decoration: none;
 	}
-	a::before {
+	.yesss::before {
 		content: '';
 		position: absolute;
 		width: 100%;
@@ -55,7 +54,7 @@
 		transform: scaleX(0);
 		transition: transform .3s ease-in-out;
 	}
-	a:hover::before {
+	.yesss:hover::before {
 	  transform-origin: left;
 	  transform: scaleX(1);
 	}
@@ -65,16 +64,34 @@
 
 
 <body>
-	<div class="container">
-		<p style="color:white; font-family: 'Audiowide', sans-serif; font-size: x-large; text-align: center;">
-			<u>Contact me on...</u> </br>
-		</p>
-		<p style="color:white; font-family: 'Audiowide', sans-serif; font-size: large;" class="yeah">
-			&nbsp;1) Discord: NullCode#1337 [898213413199675405] </br> 
-			&nbsp;2) Discord Server: <a href="https://discord.gg/s9QANySc2q">[Invite Link]</a></br>
-			&nbsp;3) Instagram: <a href="https://www.instagram.com/nullcode1337_/">nullcode1337</a>_</br>
-			&nbsp;4) Github: <a href="https://github.com/NullCode1337/">NullCode1337/</a></br>
-			&nbsp;5) Telegram (Inactive): <a href="https://t.me/nullcode1337">nullcode1337</a> 
-		</p>
-	</div>
+	<nav>
+         <div class="logo">
+            &lt;null&gt;
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a class="active" href="../index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="index.html">Contact</a></li>
+            <li><a href="#">Shop</a></li>
+         </ul>
+      </nav>
+      <div class="content">
+         <div>
+			<p style="color:white; font-family: 'Audiowide', sans-serif; font-size: x-large; text-align: center;">
+				<u>Contact me on...</u> </br>
+			</p>
+			<p style="color:white; font-family: 'Audiowide', sans-serif; font-size: large;" class="yeah">
+				&nbsp;1) Discord: NullCode#1337 [898213413199675405] </br> 
+				&nbsp;2) Discord Server: <a class="yesss" href="https://discord.gg/vr2gVjyuNv">[Invite Link]</a></br>
+				&nbsp;3) Instagram: <a class="yesss" href="https://www.instagram.com/nullcode1337_/">nullcode1337</a>_</br>
+				&nbsp;4) Github: <a class="yesss" href="https://github.com/NullCode1337/">NullCode1337/</a></br>
+				&nbsp;5) Telegram (Inactive): <a class="yesss" href="https://t.me/nullcode1337">nullcode1337</a> 
+			</p>
+         </div>
+      </div>
 </body>
