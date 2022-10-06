@@ -6,8 +6,6 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-image: url("../assets/media/ff.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,6 +33,7 @@ body {
 	color: white;
 	font-family: 'Audiowide', sans-serif;
 	letter-spacing: 2px;
+	line-height: 55pt;
 	text-decoration: underline;
 }
 #contact-text {
