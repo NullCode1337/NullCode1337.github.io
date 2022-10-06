@@ -5,20 +5,12 @@
   font-family: 'SegoeScript';
   src: url("./assets/fonts/segoesc.ttf")
 }
-*{
-  margin: 0;
-  padding: 0;
+*{ 
   box-sizing: border-box;
 } 
-body {
-  background-image: url("./assets/media/dark.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #000000;
-  color: black;
-}
+
 nav{
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   display: flex;
   height: 80px;
@@ -112,20 +104,4 @@ input[type="checkbox"]{
     background: none;
     color: cyan;
   }
-}
-
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: -1;
-  width: 100%;
-  padding: 0 30px;
-  color: #1b1b1b;
-}
-.content div{
-  font-size: 40px;
-  font-weight: 700;
 }

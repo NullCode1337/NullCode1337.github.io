@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/media/ff.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000000;
+  color: black;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 25px;
+}
+
+#heading {
+	color: white;
+	font-family: 'Audiowide', sans-serif;
+	letter-spacing: 2px;
+	text-decoration: underline;
+}
+#contact-text {
+	color: white;
+	font-family: 'Audiowide', sans-serif;
+	font-size: 22px; 
+	letter-spacing: 1.2px;
+}
+#contact-link {
+	color: #F0F8FF;
+	line-height: 26pt;
+	text-decoration: none;
+	font-size: 20px;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+#contact-link:hover {
+  box-shadow: inset 200px 0 0 0 #483D8B;
+  color: white;
+}
+
+@media (max-width: 920px) {
+	.content { line-height: 39px; }
+	#contact-text { font-size: 18px; }
+	#contact-link { font-size: 17px; }
+	#heading { font-size: 24px; }
+}
