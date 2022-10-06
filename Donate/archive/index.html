@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>NullCode1337</title>
+
+   
+
+	<link rel="stylesheet" href="topbar.css">
+
+	<link rel="stylesheet" href="style.css">
+
+   
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+
+	<meta property="og:title" content="NullCode1337">
+
+	<meta property="og:description" content="Cool website for a cool programmer">
+
+	<meta property="og:image" content="https://cdn.discordapp.com/attachments/827581657866305596/984860353982787614/placeholder.png">
+
+	<meta property="og:site_name" content="ProjectNull" />
+
+	<meta property="og:url" content="http://nullcode1337.42web.io" />
+
+	<meta name="theme-color" data-react-helmet="true" content="#273746" />
+
+</head>
+
+
+
+<body>
+
+	<noscript>
+
+		<meta HTTP-EQUIV="REFRESH" content="0; url=NoJS/index.html"> 
+
+	</noscript>
+	
+	<video autoplay muted loop id="myVideo">
+
+		<source src="assets/media/out2.mp4" type="video/mp4">
+
+	</video>
+
+	
+
+	<script>
+
+		document.getElementById("myVideo").pause();
+
+	</script>
+
+	
+
+	<nav id="navbar-default">
+
+		<ul>
+
+			<li class="logo">&lt;null&gt;</li>
+
+			<li class="items"><a href="">Home</a></li>
+
+			<li class="items"><a href="#">Projects</a></li>
+
+			<li class="items"><a href="Shop/index.html">Shop</a></li>
+
+			<li class="items"><a href="Contact/index.html">Contact</a></li>
+
+			<li class="items"><a href="Donate/index.html">Donate</a></li>
+
+			<li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+
+		</ul>
+
+	</nav>
+
+	
+
+	<script>
+
+		$(document).ready(function(){
+
+			$('.btn').click(function(){
+
+			$('.items').toggleClass("show");
+
+			$('ul li').toggleClass("hide");
+
+			});
+
+		});
+
+	</script>
+
+   
+
+   	<audio id="sound1" src="assets/media/impulse.mp3" preload="auto" loop></audio>
+
+	<div class="blurred">
+
+		<div class="element">
+
+			<button class="button" onclick="document.getElementById('sound1').play();document.getElementById('myVideo').play();shownav();hideButton(this);">
+
+				<span class="text">Enter Website</span>
+
+			</button>
+
+		</div>
+
+	</div>
+
+	
+
+	<script>
+
+		function hideButton(x) { x.style.display = 'none'; }
+
+		function shownav() { document.getElementById('navbar-default').style.display = 'block'; }
+
+	</script>
+
+
+
+</body>
+
+</html>

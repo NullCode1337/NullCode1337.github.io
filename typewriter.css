@@ -1,0 +1,16 @@
+/* aHR0cHM6Ly9jb2RlcGVuLmlvL0RhbmllbGdyb2VuL3Blbi9WZVJQT3E= */
+body {
+  background-color: white;
+  height: 100%;
+  font-family: 'tradegothiclt-bold', sans-serif;
+}
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
