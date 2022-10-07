@@ -1,28 +1,59 @@
+/* aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMTI2MDkxMTAvcmVzcG9uc2l2ZS1jc3MtYmFja2dyb3VuZC1pbWFnZXM */
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+@font-face {
+  font-family: 'Rampage';
+  src: url("../assets/fonts/rampage.ttf");
+}
+@font-face {
+  font-family: 'FlixNormal';
+  src: url("../assets/fonts/aquire.otf");
+}
+
 * {
 	  margin: 0;
   padding: 0;
 }
 
 body {
-  background-image: url("../assets/media/shop.png");
+  /* background-image: url("../assets/media/shop.png"); */
+  background: linear-gradient(to right, #757f9a, #d7dde8);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
-  background-color: #000000;
+  background-size: cover;
   color: black;
 }
 
 .content{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   z-index: -1;
   width: 100%;
   padding: 0 30px;
   color: #1b1b1b;
+}
+/* #main-texts { */
+	  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+/* } */
+h1 {
+	padding: 20px;
+	color: white;
+	font-family: 'FlixNormal', sans-serif;
+	font-size: 65px;
+  display: inline;
+  border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, #1d2b64, #f8cdda); 
+  border-image-slice: 1;
+    width:90%;
+}
+#tagline {
+	font-family: 'Rampage', sans-serif;
+	color: white;
+	font-size: 4.7vh;
 }
 .content div{
   font-size: 40px;
