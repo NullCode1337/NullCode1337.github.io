@@ -4,7 +4,7 @@
 		@font-face 
 		{
 		  font-family: SegoeScript;
-		  src: url(../assets/fonts/segoesc.ttf);
+		  src: url(./assets/fonts/segoesc.ttf);
 		}
 
 		body {
@@ -12,7 +12,7 @@
 			backdrop-filter: blur(5px);
 			margin: 0;
 		}
-
+		
 		#a {
 			color: white;
 			text-align:center;
@@ -42,13 +42,22 @@
 			/* bring your own prefixes */
 			transform: translate(-50%, -50%);
 		}
+		
+		@media (max-width: 920px) {
+				#a {
+					font-size: 3vh;
+				}
+				#b {
+					font-size: 2vh;
+				}
+		}
 	</style>
 </head>
 
 <body>
 	
 	<script>
-		window.location.replace("../index.html");
+		window.location.replace("./index.html");
 	</script>
 
 	<h1 id="c">&lt;null&gt;</h1>
