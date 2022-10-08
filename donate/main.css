@@ -1,0 +1,39 @@
+/* aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMTI2MDkxMTAvcmVzcG9uc2l2ZS1jc3MtYmFja2dyb3VuZC1pbWFnZXM */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+@font-face {
+  font-family: 'Rampage';
+  src: url("../assets/fonts/rampage.ttf");
+}
+@font-face {
+  font-family: 'FlixNormal';
+  src: url("../assets/fonts/aquire.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #9d50bb, #6e48aa);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: white;
+}
