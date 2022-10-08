@@ -6,7 +6,8 @@
 }
 
 body {
-  background-image: url("../assets/media/contact.jpg");
+  /* background-image: url("../assets/media/contact.jpg"); */
+  background: linear-gradient(to right, #4C9A80, #7EABA3);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -27,6 +28,7 @@ body {
 }
 .content div{
   font-size: 25px;
+  line-height: 47px;
 }
 
 #heading {

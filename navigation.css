@@ -97,7 +97,7 @@ nav .menu-btn i{
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
-  nav ul{ backdrop-filter: blur(5em); }
+  nav ul{ backdrop-filter: blur(2em); }
   
   #click:checked ~ ul li a{ margin-left: 0px; }
   
