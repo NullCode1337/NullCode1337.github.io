@@ -18,7 +18,9 @@
 }
 
 body {
-  background-image: url("./assets/media/main.jpg");
+  /* background-image: url("./assets/media/main.jpg"); */
+  /* background: linear-gradient(to right, #36d1dc, #5b86e5); */
+  background: linear-gradient(to right, #407585, #1cb5e0); 
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
