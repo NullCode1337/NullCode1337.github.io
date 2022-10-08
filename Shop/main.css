@@ -39,10 +39,6 @@ body {
   padding: 0 30px;
   color: #1b1b1b;
 }
-/* #main-texts { */
-	  /* filter: blur(8px); */
-  /* -webkit-filter: blur(8px); */
-/* } */
 h1 {
 	padding: 20px;
 	color: white;
@@ -50,7 +46,7 @@ h1 {
 	font-size: 65px;
   display: inline;
   border-bottom: 3px solid transparent;
-    border-image: linear-gradient(to right, #1d2b64, #f8cdda); 
+    border-image: linear-gradient(to right, #da22ff, #9733ee); 
   border-image-slice: 1;
     width:90%;
 }
