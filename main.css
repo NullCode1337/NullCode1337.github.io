@@ -20,7 +20,8 @@
 body {
   /* background-image: url("./assets/media/main.jpg"); */
   /* background: linear-gradient(to right, #36d1dc, #5b86e5); */
-  background: linear-gradient(to right, #407585, #1cb5e0); 
+  /* background: linear-gradient(to right, #407585, #1cb5e0);  */
+  background: linear-gradient(to right, #fc5c7d, #6a82fb);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -42,4 +43,46 @@ body {
 .content div{
   font-size: 40px;
   font-weight: 700;
+}
+
+button {
+ align-items: center;
+ background-image: linear-gradient(to right, #42275a, #734b6d);
+ border: 0;
+ position: relative;
+ border-radius: 8px;
+ box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+ color: #FFFFFF;
+ font-family: Phantomsans, sans-serif;
+ font-size: 18px;
+ justify-content: center;
+ line-height: 1em;
+ max-width: 100%;
+ min-width: 140px;
+ padding: 3px;
+ text-decoration: none;
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ white-space: nowrap;
+ cursor: pointer;
+ transition: all .3s;
+  background-color: rgb(5, 6, 45);
+ padding: 16px 24px;
+ border-radius: 6px;
+ transition: 300ms;
+
+}
+
+button:active,
+button:hover {
+ outline: 0;
+}
+
+button:hover span {
+ background: none;
+}
+
+button:active {
+ transform: scale(0.9);
 }

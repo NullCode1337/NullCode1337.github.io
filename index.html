@@ -15,7 +15,6 @@
 	<meta property="og:title" content="NullCode1337">
 	<meta property="og:description" content="Cool website for a cool programmer">
 	<meta property="og:image" content="https://cdn.discordapp.com/attachments/827581657866305596/984860353982787614/placeholder.png">
-	<meta property="og:site_name" content="ProjectNull" />
 	<meta property="og:url" content="http://null337.rf.gd" />
 
 	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
@@ -41,7 +40,7 @@
          </label>
          <ul>
 			<li><a class="active" href="#">Home</a></li>
-			<li><a href="#">Projects</a></li>
+			<li><a href="./projects/index.html">Projects</a></li>
             <li><a href="./shop/index.html">Shop</a></li>
             <li><a href="./contact/index.html">Contact</a></li>
             <li><a href="./donate/index.html">Donate</a></li>
@@ -50,12 +49,29 @@
       <div class="content">
 
          <div>
-		    <p id="typewr">Hello</p>
+		    <p class="span" id="typewr">Hello</p>
 			<script src="typewriter.js"></script>
          </div>
+		
       </div>
 	  
-	  	<script>
+	  <div class="content">
+	  
+		<p></br></br></br></br></br></br></br></br></br><p>
+		<form style="display:inline-block;" action="./projects/index.html">
+			<button>
+				<p class="text">Explore my projects</p>
+			</button>
+		</form>
+		<form style="display:inline-block;" action="./contact/index.html">
+			<button onclick="./contact/index.html">
+				<p class="text">Contact me</p>
+			</button>
+		</form>
+		
+	  </div>
+	  
+	  <script>
 		alert("This site is still a work in progress!");
-	</script>
+	  </script>
 </body>
