@@ -23,12 +23,12 @@ body {
   text-align: center;
   z-index: -1;
   width: 100%;
+  line-height: 50px;
   padding: 0 30px;
   color: #1b1b1b;
 }
 .content div{
   font-size: 25px;
-  line-height: 47px;
 }
 
 #heading {
@@ -76,7 +76,17 @@ body {
 
 @media (max-width: 920px) {
 	.content { line-height: 39px; }
-	#contact-text { font-size: 18px; }
+	#contact-text { font-size: 20px; }
 	#contact-link { font-size: 17px; }
 	#heading { font-size: 24px; }
+}
+
+@media (max-width: 345px) {
+	.content {line-height: 0px;}
+	#contact-text {
+		font-size: 15px;
+	}
+	#contact-link-discord {font-size: 12px;}
+	#contact-link {font-size: 12px;}
+	#heading {font-size: 20px;}
 }
