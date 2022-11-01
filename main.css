@@ -20,8 +20,8 @@
 body {
   /* background-image: url("./assets/media/main.jpg"); */
   /* background: linear-gradient(to right, #36d1dc, #5b86e5); */
-  /* background: linear-gradient(to right, #407585, #1cb5e0);  */
-  background: linear-gradient(45deg, #fc5c7d, #6a82fb);
+  background: linear-gradient(45deg, rgba(252,92,125,1) 0%, rgba(106,130,251,1) 88%);
+  /* background: linear-gradient(45deg, #fc5c7d, #6a82fb); */
   background-repeat: no-repeat;
   background-size: 200%;
   background-attachment: fixed;
