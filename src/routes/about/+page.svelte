@@ -16,5 +16,3 @@
     &lt;null&gt;
   </h1>
 </div>
-
-<DarkMode />
