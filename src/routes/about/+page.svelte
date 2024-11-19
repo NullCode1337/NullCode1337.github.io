@@ -16,6 +16,6 @@
   id="content"
 >
   <h1 class="text-slate-50 pointer-events-none text-4xl font-segoescr">
-    &lt;Keeping myself safe&gt;
+    &lt;null&gt;
   </h1>
 </div>
