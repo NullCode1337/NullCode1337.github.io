@@ -3,4 +3,4 @@
 </svelte:head>
 
 <h1>Still WIP!</h1>
-<a href="/about">About Me</a>
+<a href="/nullcode1337">About Me</a>
