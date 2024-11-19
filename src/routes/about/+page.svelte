@@ -1,8 +1,3 @@
-<script>
-  import { base } from "$app/paths";
-  import DarkMode from "$lib/DarkMode.svelte";
-</script>
-
 <svelte:head>
   <title>About NullCode1337</title>
 </svelte:head>
