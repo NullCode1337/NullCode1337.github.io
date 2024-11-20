@@ -2,16 +2,20 @@
   let value = "30";
   let newVal = "";
   function playAudio(event) {
-    if (!audio.paused) {
-      audio.paused = true;
-    } else {
+    if (audio.currentTime == 0) {
       audio.src = "media/flower.m4a";
       audio.volume = 0.5;
+      audio.play();
+      return;
+    }
+
+    if (!audio.paused) {
+      audio.pause();
+    } else {
       audio.play();
     }
   }
   function changeVolume(event) {
-    console.log(String(value).length);
     newVal = String(value);
     switch (newVal.length) {
       case 2:
@@ -30,7 +34,7 @@
 </script>
 
 <svelte:head>
-  <title>NullCode1337</title>
+  <title>@nullcode1337</title>
 </svelte:head>
 <video
   autoplay
@@ -42,7 +46,7 @@
 </video>
 
 <div
-  class="p-4 text-center min-w-16 min-h-16 fixed mt-4 ml-4 rounded-full backdrop-blur-xl shadow-3xl text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 [&>div]:invisible [&>div]:hover:visible max-h-0 max-w-0"
+  class="p-4 text-center min-w-20 min-h-16 fixed mt-4 ml-4 rounded-full backdrop-blur-xl shadow-3xl text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-lg shadow-blue-500/50 [&>div]:invisible [&>div]:hover:visible max-h-0 max-w-0"
 >
   <button
     class="align-middle"
@@ -51,7 +55,9 @@
     id="volume"
     on:click={playAudio}
   >
-    <i class="fa-solid fa-music inline float-none"></i>
+    <i class="fa-solid fa-play inline float-none"></i>
+    <i class="fa-solid fa-slash-forward inline float-none"></i>
+    <i class="fa-solid fa-pause inline float-none"></i>
   </button>
   <div class="align-middle transition delay-150" id="slidecontainer">
     <br /> <br />
