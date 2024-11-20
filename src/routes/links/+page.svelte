@@ -3,25 +3,28 @@
   let newVal = "";
   function playAudio(event) {
     if (!audio.paused) {
-      return;
+      audio.paused = true;
+    } else {
+      audio.src = "media/flower.m4a";
+      audio.volume = 0.5;
+      audio.play();
     }
-    audio.src = "media/flower.m4a";
-    audio.volume = 0.5;
-    audio.play();
   }
   function changeVolume(event) {
     console.log(String(value).length);
     newVal = String(value);
-    if (newVal.length == 2) {
-      newVal = "0." + newVal;
-      newVal = Number(newVal);
-    } else if (newVal.length == 1) {
-      newVal = "0.0" + newVal;
-      newVal = Number(newVal);
-    } else {
-      newVal = 1.0;
-    }
+    switch (newVal.length) {
+      case 2:
+        newVal = Number("0." + newVal);
+        break;
 
+      case 1:
+        newVal = Number("0.0" + newVal);
+        break;
+
+      default:
+        newVal = 1.0;
+    }
     audio.volume = newVal;
   }
 </script>
@@ -62,7 +65,7 @@
       on:change={changeVolume}
     />
   </div>
-  <audio controls class="hidden" id="audio"></audio>
+  <audio controls loop class="hidden" id="audio"></audio>
 </div>
 
 <div
