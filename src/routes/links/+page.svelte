@@ -77,8 +77,6 @@
 <div
   class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 p-8 rounded-2xl shadow-3xl bg-black/10 backdrop-blur-xl"
   id="content"
-  on:click={playAudio}
-  onKeyDown={this.handleClick}
 >
   <h1
     class="relative text-slate-50 pointer-events-none text-4xl font-segoescr font-extrabold align-center justify-center z-20 p-0.5"
