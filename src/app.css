@@ -10,7 +10,7 @@ body {
 @layer base {
   @font-face {
     font-family: "Segoe Script";
-    src: url("/segoesc.ttf");
+    src: url("/fonts/segoesc.ttf");
     font-weight: normal;
     font-display: swap;
   }
