@@ -35,6 +35,7 @@
 <svelte:head>
   <title>@nullcode1337 | Denza</title>
 </svelte:head>
+
 <video
   autoplay
   muted
