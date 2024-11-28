@@ -35,17 +35,22 @@
 <svelte:head>
   <title>@nullcode1337 | Denza</title>
 </svelte:head>
+
 <video
   autoplay
   muted
   loop
-  class="absolute z-0 pointer-events-none min-w-full min-h-full right-0 bottom-0 object-cover blur-lg"
+  class="absolute z-0 min-w-full min-h-full right-0 bottom-0 
+  object-cover blur-lg pointer-events-none"
 >
   <source src="media/about.mp4" type="video/mp4" />
 </video>
 
 <div
-  class="p-4 text-center min-w-20 min-h-20 fixed mt-4 ml-4 rounded-full backdrop-blur-xl shadow-3xl text-white bg-slate-50/10 focus:ring-4 focus:outline-none focus:ring-slate-300 shadow-lg shadow-slate-500/50 [&>div]:invisible [&>div]:hover:visible max-h-0 max-w-0"
+  class="fixed p-4 min-w-20 min-h-20 mt-4 ml-4 max-h-0 max-w-0 rounded-full
+  text-center text-white bg-slate-50/10 backdrop-blur-xl
+  focus:ring-4 focus:outline-none focus:ring-slate-300 shadow-lg shadow-slate-500/50
+  [&>div]:invisible [&>div]:hover:visible"
 >
   <button
     class="align-middle"
@@ -54,10 +59,8 @@
     id="volume"
     on:click={playAudio}
   >
-    <p class="inline float-none">Track</p>
-    <i class="fa-solid fa-play inline float-none"></i>
-    <i class="fa-solid fa-slash-forward inline float-none"></i>
-    <i class="fa-solid fa-pause inline float-none"></i>
+    <p>Play</p>
+    <i class="fa-solid fa-play align-middle inline float-none"></i>
   </button>
   <div class="align-middle transition delay-150" id="slidecontainer">
     <br /> <br />
@@ -68,7 +71,7 @@
       max="100"
       class="bg-white/10"
       bind:value
-      on:change={changeVolume}
+      on:input={changeVolume}
     />
   </div>
   <audio controls loop class="hidden" id="audio"></audio>
