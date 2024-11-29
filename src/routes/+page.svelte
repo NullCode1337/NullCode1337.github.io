@@ -1,6 +1,7 @@
 <script>
   let play = (volume) => {
-    const vol = volume || 0.3;
+    let vol = volume || 0.3;
+
     if (audio.currentTime == 0) {
       audio.src = "media/flower.m4a";
       audio.volume = vol;
@@ -56,9 +57,8 @@
 
 <div
   class="fixed p-4 mt-4 ml-4 rounded-full
-  text-center text-white bg-slate-50/10
-  shadow-lg shadow-slate-500/50 backdrop-blur-xl
-  transition delay-75 hover:bg-white/35"
+  text-center text-white bg-slate-50/10 def-shadow
+  backdrop-blur-xl transition delay-75 hover:bg-white/35"
 >
   <button
     class="align-middle w-full h-full"
@@ -76,10 +76,7 @@
 
 <div
   id="slidecontainer"
-  class="transition-opacity
-  align-middle fixed p-4 mt-4 ml-28 rounded-full
-  shadow-lg shadow-slate-500/50 backdrop-blur-xl
-  [&>input]:invisible [&>input]:hover:visible"
+  class="align-middle fixed p-4 mt-4 ml-28 rounded-full def-shadow backdrop-blur-xl"
 >
   <button
     class="align-middle"
@@ -93,7 +90,7 @@
     type="range"
     min="1"
     max="100"
-    class="bg-white/10 align-middle"
+    class="accent-slate-50 align-middle ml-1"
     bind:value
     on:input={changeVolume}
     id="volumeRange"
