@@ -1,15 +1,28 @@
 <script>
-  let value = "30";
-  function playAudio(event) {
+  let play = (volume) => {
+    const vol = volume || 0.3;
     if (audio.currentTime == 0) {
       audio.src = "media/flower.m4a";
-      audio.volume = 0.5;
+      audio.volume = vol;
       audio.play();
       return;
+    } else {
+      audio.volume = vol;
     }
+  };
+
+  function playAudio(event) {
+    play();
   }
+
+  function muteOrUnmute(event) {
+    audio.muted = !audio.muted;
+  }
+
+  let value = "30";
   function changeVolume(event) {
     let newVal = String(value);
+
     switch (newVal.length) {
       case 2:
         newVal = Number("0." + newVal);
@@ -22,7 +35,8 @@
       default:
         newVal = 1.0;
     }
-    audio.volume = newVal;
+
+    play(newVal);
   }
 </script>
 
@@ -42,46 +56,56 @@
 
 <div
   class="fixed p-4 mt-4 ml-4 rounded-full
-  text-center text-white bg-slate-50/10 backdrop-blur-xl
-  focus:ring-4 focus:outline-none focus:ring-slate-300 shadow-lg shadow-slate-500/50"
+  text-center text-white bg-slate-50/10
+  shadow-lg shadow-slate-500/50 backdrop-blur-xl
+  transition delay-75 hover:bg-white/35"
 >
   <button
-    class="align-middle"
+    class="align-middle w-full h-full"
     type="button"
     aria-label="Play Music"
     id="volume"
     on:click={playAudio}
   >
-    <p class="font-bold inline float-none">Play&nbsp;</p>
+    <p class="font-bold inline float-none text-white">Play&nbsp;</p>
     <i class="fa-solid fa-play align-middle inline float-none"></i>
   </button>
 
   <audio controls loop class="hidden" id="audio"></audio>
 </div>
 
-<br />
 <div
-  class="opacity-0 hover:opacity-100 transition-opacity align-middle fixed p-4 mt-8 ml-4"
   id="slidecontainer"
+  class="transition-opacity
+  align-middle fixed p-4 mt-4 ml-28 rounded-full
+  shadow-lg shadow-slate-500/50 backdrop-blur-xl
+  [&>input]:invisible [&>input]:hover:visible"
 >
-  <br />
-  <button aria-label="Change volume of music">
+  <button
+    class="align-middle"
+    aria-label="Mute audio"
+    id="muteButton"
+    on:click={muteOrUnmute}
+  >
     <i class="fa-solid fa-volume-up inline float-none"></i>
   </button>
-  <label class="pointer-events-none select-none" for="myRange">Volume</label>
   <input
     type="range"
     min="1"
     max="100"
-    class="bg-white/10"
+    class="bg-white/10 align-middle"
     bind:value
     on:input={changeVolume}
+    id="volumeRange"
   />
 </div>
 
 <div
-  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 p-8 rounded-2xl shadow-3xl bg-black/10 backdrop-blur-xl"
   id="content"
+  class="absolute
+  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  z-10 p-8 rounded-2xl backdrop-blur-xl shadow-3xl
+  bg-black/10"
 >
   <h1
     class="relative text-slate-50 pointer-events-none select-none text-4xl font-segoescr font-extrabold align-center justify-center z-20 p-0.5"
