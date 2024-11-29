@@ -41,34 +41,42 @@
 </video>
 
 <div
-  class="fixed p-4 min-w-20 min-h-20 mt-4 ml-4 max-h-0 max-w-0 rounded-full
+  class="fixed p-4 mt-4 ml-4 rounded-full
   text-center text-white bg-slate-50/10 backdrop-blur-xl
-  focus:ring-4 focus:outline-none focus:ring-slate-300 shadow-lg shadow-slate-500/50
-  [&>div]:invisible [&>div]:hover:visible"
+  focus:ring-4 focus:outline-none focus:ring-slate-300 shadow-lg shadow-slate-500/50"
 >
   <button
     class="align-middle"
     type="button"
-    aria-label="Play or Pause Music"
+    aria-label="Play Music"
     id="volume"
     on:click={playAudio}
   >
-    <p>Play</p>
+    <p class="font-bold inline float-none">Play&nbsp;</p>
     <i class="fa-solid fa-play align-middle inline float-none"></i>
   </button>
-  <div class="align-middle transition delay-150" id="slidecontainer">
-    <br /> <br />
-    <label for="myRange">Volume</label>
-    <input
-      type="range"
-      min="1"
-      max="100"
-      class="bg-white/10"
-      bind:value
-      on:input={changeVolume}
-    />
-  </div>
+
   <audio controls loop class="hidden" id="audio"></audio>
+</div>
+
+<br />
+<div
+  class="opacity-0 hover:opacity-100 transition-opacity align-middle fixed p-4 mt-8 ml-4"
+  id="slidecontainer"
+>
+  <br />
+  <button aria-label="Change volume of music">
+    <i class="fa-solid fa-volume-up inline float-none"></i>
+  </button>
+  <label class="pointer-events-none select-none" for="myRange">Volume</label>
+  <input
+    type="range"
+    min="1"
+    max="100"
+    class="bg-white/10"
+    bind:value
+    on:input={changeVolume}
+  />
 </div>
 
 <div
@@ -76,7 +84,7 @@
   id="content"
 >
   <h1
-    class="relative text-slate-50 pointer-events-none text-4xl font-segoescr font-extrabold align-center justify-center z-20 p-0.5"
+    class="relative text-slate-50 pointer-events-none select-none text-4xl font-segoescr font-extrabold align-center justify-center z-20 p-0.5"
   >
     &lt;null&gt;
   </h1>
