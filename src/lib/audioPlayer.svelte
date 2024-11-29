@@ -15,17 +15,16 @@
     }
   }
 
-  export function playAudio(event, file) {
-    play(event, file);
-  }
-
+  // unused function; might use later
   export function muteOrUnmute(event) {
     audio.muted = !audio.muted;
   }
 
-  export function changeVolume(event, value) {
+  export function changeVolume(event, value, file) {
     let newVal = String(value);
-
+    if (file === undefined) {
+      file = "";
+    }
     switch (newVal.length) {
       case 2:
         newVal = Number("0." + newVal);
@@ -37,7 +36,8 @@
         newVal = 1.0;
     }
 
-    play(event, "", newVal);
+    play(event, file, newVal);
+    audio.muted = false;
   }
 </script>
 

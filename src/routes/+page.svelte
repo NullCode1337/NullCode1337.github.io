@@ -1,17 +1,34 @@
 <script>
-  let value = "30";
+  import { play, changeVolume } from "$lib/audioPlayer.svelte";
 
-  import {
-    playAudio,
-    muteOrUnmute,
-    changeVolume,
-  } from "$lib/audioPlayer.svelte";
+  let audioFileDir = "media/flower.m4a";
+  let value = "40";
+  let muted = true;
 
   function changeVlm(event) {
-    changeVolume(event, value);
+    if (audio.currentTime == 0) {
+      muted = false;
+    }
+    if (value === "1") {
+      return;
+    }
+    changeVolume(event, value, audioFileDir);
   }
 
-  let notPressed = false;
+  function muteOrUnmute(event) {
+    if (audio.currentTime == 0) {
+      play(event, audioFileDir);
+      muted = false;
+      return;
+    }
+    muted = true ? !audio.muted : false;
+    audio.muted = !audio.muted;
+    if (muted) {
+      value = "1";
+    } else {
+      value = "40";
+    }
+  }
 </script>
 
 <svelte:head>
@@ -28,28 +45,11 @@
   <source src="media/about.mp4" type="video/mp4" />
 </video>
 
-<div
-  class="fixed p-4 mt-4 ml-4 rounded-full
-  text-center text-white bg-slate-50/10 def-shadow
-  backdrop-blur-xl transition delay-75 hover:bg-white/35"
->
-  <button
-    class="align-middle w-full h-full"
-    type="button"
-    aria-label="Play Music"
-    id="volume"
-    on:click={(event) => playAudio(event, "media/flower.m4a")}
-  >
-    <p class="font-bold inline float-none text-white">Play&nbsp;</p>
-    <i class="fa-solid fa-play align-middle inline float-none"></i>
-  </button>
-
-  <audio controls loop class="hidden" id="audio"></audio>
-</div>
+<audio controls loop class="hidden" id="audio"></audio>
 
 <div
   id="slidecontainer"
-  class="align-middle fixed p-4 mt-4 ml-28 rounded-full def-shadow backdrop-blur-xl"
+  class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl"
 >
   <button
     class="align-middle"
@@ -57,10 +57,10 @@
     id="muteButton"
     on:click={(event) => muteOrUnmute(event)}
   >
-    {#if notPressed}
-      <i class="fa-solid fa-volume-up inline float-none"></i>
-    {:else}
+    {#if muted}
       <i class="fa-solid fa-volume-mute inline float-none"></i>
+    {:else}
+      <i class="fa-solid fa-volume-up inline float-none"></i>
     {/if}
   </button>
 
