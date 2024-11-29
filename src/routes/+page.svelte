@@ -7,12 +7,6 @@
       audio.play();
       return;
     }
-
-    if (!audio.paused) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
   }
   function changeVolume(event) {
     let newVal = String(value);
@@ -40,7 +34,7 @@
   autoplay
   muted
   loop
-  class="absolute z-0 min-w-full min-h-full right-0 bottom-0 
+  class="absolute z-0 min-w-full min-h-full right-0 bottom-0
   object-cover blur-lg pointer-events-none"
 >
   <source src="media/about.mp4" type="video/mp4" />
