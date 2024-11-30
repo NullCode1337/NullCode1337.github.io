@@ -6,11 +6,14 @@
   let muted = true;
 
   function changeVlm(event) {
-    if (audio.currentTime == 0) {
-      muted = false;
-    }
-    if (value === "1") {
+    console.log(value);
+    if (value == "1") {
+      audio.muted = true;
+      muted = true;
       return;
+    }
+    if (audio.currentTime == 0 || value != "1") {
+      muted = false;
     }
     changeVolume(event, value, audioFileDir);
   }
@@ -49,7 +52,7 @@
 
 <div
   id="slidecontainer"
-  class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl"
+  class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10"
 >
   <button
     class="align-middle"
@@ -63,7 +66,6 @@
       <i class="fa-solid fa-volume-up inline float-none"></i>
     {/if}
   </button>
-
   <input
     type="range"
     min="1"

@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "rm -r build && vite build && vite preview",
-    "onlyPreview": "vite preview",
+    "preview": "rm -r build && vite build && vite preview --host",
+    "pv": "vite preview --host",
     "prettify": "prettier . --write"
   },
   "devDependencies": {
