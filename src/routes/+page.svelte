@@ -70,7 +70,7 @@
     aria-checked="true"
     checked="checked"
     id="muteButton"
-    on:keydown={(event) => muteOrUnmute(event)}
+    on:keypress={(event) => muteOrUnmute(event)}
     on:click={(event) => muteOrUnmute(event)}
   />
 
