@@ -55,6 +55,7 @@
   id="slidecontainer"
   class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10 min-h-max"
 >
+  <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
   <label for="muteButton">
     {#if muted}
       <i class="fa-solid fa-volume-mute inline float-none"></i>
@@ -65,11 +66,10 @@
 
   <input
     type="checkbox"
-    class="align-middle hidden"
+    class="align-middle absolute z-0 opacity-0 float-none"
     aria-label="Mute audio"
     aria-checked="true"
     checked="checked"
-    tabindex="0"
     id="muteButton"
     on:keydown={(event) => muteOrUnmute(event)}
     on:click={(event) => muteOrUnmute(event)}
