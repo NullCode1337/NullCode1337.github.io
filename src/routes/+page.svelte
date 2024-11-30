@@ -19,6 +19,10 @@
   }
 
   function muteOrUnmute(event) {
+    if (event.code == "Space" || event.code != "KeyM") {
+      return; // let PointerEvent handle spaces; ignore all else
+    }
+    console.log(event);
     if (audio.currentTime == 0) {
       play(event, audioFileDir);
       muted = false;
