@@ -81,8 +81,8 @@
   id="content"
   class="absolute
   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-  z-10 p-8 rounded-2xl backdrop-blur-xl shadow-3xl
-  bg-black/10"
+  z-10 rounded-2xl p-8 backdrop-blur-xl shadow-3xl
+  bg-black/10 min-w-max"
 >
   <h1
     class="relative text-slate-50 pointer-events-none select-none
