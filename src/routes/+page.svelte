@@ -7,7 +7,6 @@
   let muted = true;
 
   function changeVlm(event) {
-    console.log(value);
     if (value == "1") {
       audio.muted = true;
       muted = true;
