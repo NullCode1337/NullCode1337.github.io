@@ -1,5 +1,6 @@
 <script>
-  import { play, changeVolume } from "$lib/audioPlayer.svelte";
+  import { play, changeVolume } from "$lib/AudioPlayer.svelte";
+  import Icons from "$lib/Icons.svelte";
 
   let audioFileDir = "media/flower.m4a";
   let value = "40";
@@ -81,14 +82,28 @@
   id="content"
   class="absolute
   top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-  z-10 rounded-2xl p-8 backdrop-blur-xl shadow-3xl
-  bg-black/10 min-w-max"
+  z-10 rounded-2xl p-8 backdrop-blur-xl shadow-3xl bg-black/10
+  w-4/5 ml-auto mr-auto md:w-1/2 md:min-w-max"
 >
   <h1
     class="relative text-slate-50 pointer-events-none select-none
     text-4xl font-segoescr font-extrabold align-center justify-center z-20 p-0.5"
   >
     &lt;null&gt;
+    <a
+      aria-label="GitHub Link"
+      class="inline float-right"
+      href="https://github.com/NullCode1337"
+    >
+      <Icons name="GitHub" class="invert" />
+    </a>
+    <a
+      aria-label="Discord Link"
+      class="inline float-right pr-2"
+      href="https://discord.com/invite/4CRGnuHZ"
+    >
+      <Icons name="Discord" class="invert" />
+    </a>
   </h1>
   <hr />
   <br />
