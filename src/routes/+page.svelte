@@ -53,14 +53,14 @@
 
 <div
   id="slidecontainer"
-  class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10 min-h-max"
+  class="align-middle fixed p-4 md:px-5 md:py-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10 min-h-max"
 >
   <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
   <label for="muteButton">
     {#if muted}
-      <i class="fa-solid fa-volume-mute inline float-none"></i>
+      <i class="fa-solid fa-volume-mute fa-lg lg:fa-xl inline float-none"></i>
     {:else}
-      <i class="fa-solid fa-volume-up inline float-none"></i>
+      <i class="fa-solid fa-volume-up fa-lg lg:fa-xl inline float-none"></i>
     {/if}
   </label>
 
