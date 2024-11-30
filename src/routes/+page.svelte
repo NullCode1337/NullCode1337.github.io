@@ -55,18 +55,26 @@
   id="slidecontainer"
   class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10 min-h-max"
 >
-  <button
-    class="align-middle"
-    aria-label="Mute audio"
-    id="muteButton"
-    on:click={(event) => muteOrUnmute(event)}
-  >
+  <label for="muteButton">
     {#if muted}
       <i class="fa-solid fa-volume-mute inline float-none"></i>
     {:else}
       <i class="fa-solid fa-volume-up inline float-none"></i>
     {/if}
-  </button>
+  </label>
+
+  <input
+    type="checkbox"
+    class="align-middle hidden"
+    aria-label="Mute audio"
+    aria-checked="true"
+    checked="checked"
+    tabindex="0"
+    id="muteButton"
+    on:keydown={(event) => muteOrUnmute(event)}
+    on:click={(event) => muteOrUnmute(event)}
+  />
+
   <input
     type="range"
     min="1"
@@ -91,14 +99,14 @@
   >
     <span class="pointer-events-none select-none">&lt;null&gt;</span>
     <a
-      aria-label="GitHub Link"
+      aria-label="NullCode's GitHub"
       class="inline float-right"
       href="https://github.com/NullCode1337"
     >
       <Icons name="GitHub" class="invert" />
     </a>
     <a
-      aria-label="Discord Link"
+      aria-label="Add NullCode on Discord"
       class="inline float-right pr-2"
       href="https://discord.com/invite/4CRGnuHZ"
     >
@@ -118,7 +126,10 @@
 
 <style>
   /* Make volume slider hide until hovered */
-  #slidecontainer:not(:hover) #volumeRange {
-    display: none;
+  /* Only on mobile */
+  @media (max-width: 768px) {
+    #muteButton:checked ~ #volumeRange {
+      display: none;
+    }
   }
 </style>
