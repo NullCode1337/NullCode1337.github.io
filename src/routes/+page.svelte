@@ -53,7 +53,7 @@
 
 <div
   id="slidecontainer"
-  class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10"
+  class="align-middle fixed p-4 mt-4 ml-4 rounded-full def-shadow backdrop-blur-xl bg-slate-50/10 min-h-max"
 >
   <button
     class="align-middle"
@@ -86,10 +86,10 @@
   w-4/5 ml-auto mr-auto md:w-1/2 md:min-w-max"
 >
   <h1
-    class="relative text-slate-50 pointer-events-none select-none
-    text-4xl font-segoescr font-extrabold align-center justify-center z-20 p-0.5"
+    class="relative text-slate-50 font-segoescr font-extrabold
+    text-4xl align-center justify-center z-20 p-0.5"
   >
-    &lt;null&gt;
+    <span class="pointer-events-none select-none">&lt;null&gt;</span>
     <a
       aria-label="GitHub Link"
       class="inline float-right"
@@ -115,3 +115,10 @@
     quia sit?
   </h2> -->
 </div>
+
+<style>
+  /* Make volume slider hide until hovered */
+  #slidecontainer:not(:hover) #volumeRange {
+    display: none;
+  }
+</style>
