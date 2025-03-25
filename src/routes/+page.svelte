@@ -1,6 +1,7 @@
 <script>
   import { play, changeVolume } from "$lib/AudioPlayer.svelte";
   import Icons from "$lib/Icons.svelte";
+  import copy from 'copy-to-clipboard';
 
   let audioFileDir = "media/flower.m4a";
   let value = "40";
@@ -109,17 +110,10 @@
     >
       <Icons name="GitHub" class="invert" />
     </a>
-    <a
-      aria-label="Add NullCode on Discord"
-      class="inline float-right pr-2"
-      href="https://discord.com/invite/4CRGnuHZ"
-    >
-      <Icons name="Discord" class="invert" />
-    </a>
   </h1>
   <hr />
   <br />
-  <h2>Python, Golang, Web Developer</h2>
+  <h2>I thought it'd be cool to have a portfolio site</h2>
   <!-- <h2>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla atque
     perferendis est molestias eius ipsa quaerat dolore doloribus, veritatis
