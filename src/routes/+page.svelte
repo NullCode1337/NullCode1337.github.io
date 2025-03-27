@@ -3,7 +3,7 @@
   import Icons from "$lib/Icons.svelte";
   import copy from "copy-to-clipboard";
 
-  let audioFileDir = "media/flower.m4a";
+  let audioFileDir = "media/heartbreak.mp3";
   let value = "40";
   let muted = true;
 
