@@ -1,7 +1,7 @@
 <script>
   import { play, changeVolume } from "$lib/AudioPlayer.svelte";
   import Icons from "$lib/Icons.svelte";
-  import copy from 'copy-to-clipboard';
+  import copy from "copy-to-clipboard";
 
   let audioFileDir = "media/flower.m4a";
   let value = "40";
@@ -44,7 +44,7 @@
   <title>@nullcode1337 | Denza</title>
 </svelte:head>
 
-<video
+<!-- <video
   autoplay
   muted
   loop
@@ -52,7 +52,7 @@
   object-cover blur-lg pointer-events-none"
 >
   <source src="media/about.mp4" type="video/mp4" />
-</video>
+</video> -->
 
 <audio controls loop class="hidden" id="audio"></audio>
 
@@ -111,7 +111,6 @@
       <Icons name="GitHub" class="invert" />
     </a>
   </h1>
-  <hr />
   <br />
   <h2>I thought it'd be cool to have a portfolio site</h2>
   <!-- <h2>
