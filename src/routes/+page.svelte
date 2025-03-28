@@ -54,7 +54,7 @@
   <source src="media/about.mp4" type="video/mp4" />
 </video> -->
 
-<audio controls loop class="hidden" id="audio"></audio>
+<audio controls loop class="hidden" id="audio" preload="auto"></audio>
 
 <div
   id="slidecontainer"
@@ -89,36 +89,6 @@
     on:input={(event) => changeVlm(event)}
     id="volumeRange"
   />
-</div>
-
-<div
-  id="content"
-  class="absolute
-  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-  z-10 rounded-2xl p-8 backdrop-blur-xl shadow-3xl bg-black/10
-  w-4/5 ml-auto mr-auto md:w-1/2 md:min-w-max"
->
-  <h1
-    class="relative text-slate-50 font-segoescr font-extrabold
-    text-4xl align-center justify-center z-20 p-0.5"
-  >
-    <span class="pointer-events-none select-none">&lt;null&gt;</span>
-    <a
-      aria-label="NullCode's GitHub"
-      class="inline float-right"
-      href="https://github.com/NullCode1337"
-    >
-      <Icons name="GitHub" class="invert" />
-    </a>
-  </h1>
-  <br />
-  <h2>I thought it'd be cool to have a portfolio site</h2>
-  <!-- <h2>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla atque
-    perferendis est molestias eius ipsa quaerat dolore doloribus, veritatis
-    ratione tempore voluptatem dolorem culpa blanditiis illo iusto voluptates,
-    quia sit?
-  </h2> -->
 </div>
 
 <div class="snowflakes" aria-hidden="true">
@@ -158,6 +128,36 @@
   <div class="snowflake">
     <div class="inner">❅</div>
   </div>
+</div>
+
+<div
+  id="content"
+  class="absolute
+  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+  z-10 rounded-2xl p-8 backdrop-blur-sm shadow-3xl bg-black/10
+  w-4/5 ml-auto mr-auto md:w-1/2 md:min-w-max"
+>
+  <h1
+    class="relative text-slate-50 font-segoescr font-extrabold
+    text-4xl align-center justify-center z-20 p-0.5"
+  >
+    <span class="pointer-events-none select-none">&lt;null&gt;</span>
+    <a
+      aria-label="NullCode's GitHub"
+      class="inline float-right"
+      href="https://github.com/NullCode1337"
+    >
+      <Icons name="GitHub" class="invert" />
+    </a>
+  </h1>
+  <br />
+  <h2>I thought it'd be cool to have a portfolio site</h2>
+  <!-- <h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla atque
+    perferendis est molestias eius ipsa quaerat dolore doloribus, veritatis
+    ratione tempore voluptatem dolorem culpa blanditiis illo iusto voluptates,
+    quia sit?
+  </h2> -->
 </div>
 
 <style>
@@ -202,17 +202,17 @@
   .snowflake {
     position: fixed;
     top: -10%;
-    z-index: 9999;
+    z-index: 1;
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
     pointer-events: none;
     animation-name: snowflakes-shake;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
   }
   .snowflake .inner {
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-name: snowflakes-fall;
     animation-timing-function: linear;
   }
